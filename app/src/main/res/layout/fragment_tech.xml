@@ -17,11 +17,34 @@
         android:text="TECH NEWS"
         android:textSize="23sp"/>
 
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/textViewTech"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/filter"
+        android:id="@+id/imageViewFilter"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTech"
+        android:id="@+id/spinnerTechFilter"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone">
+
+    </Spinner>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerTech"
-        android:layout_below="@+id/textViewTech">
+        android:layout_below="@+id/spinnerTechFilter">
 
     </android.support.v7.widget.RecyclerView>
 

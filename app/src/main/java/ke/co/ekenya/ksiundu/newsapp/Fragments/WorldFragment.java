@@ -58,7 +58,7 @@ public class WorldFragment extends Fragment {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            String url = "https://newsapi.org/v2/everything?q=all&apiKey=2000bed637964320887999f67adb1242";
+            String url = "https://newsapi.org/v2/everything?q=all&apiKey=390a63f3032e4dd9ac906401f6140e7e";
             ApiService mService = new ApiService();
             String response = mService.getWorldNews(url);
 

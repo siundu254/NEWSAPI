@@ -13,6 +13,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,13 +85,15 @@ public class HeadLinesFragment extends Fragment  {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            String url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=2000bed637964320887999f67adb1242";
+            String url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=390a63f3032e4dd9ac906401f6140e7e";
             ApiService mService = new ApiService();
             String response = mService.getHeadLines(url);
 
             try {
                 JSONObject mResponseObject = new JSONObject(response);
                 JSONArray mArticlesArray = mResponseObject.getJSONArray("articles");
+
+                Log.v("data", String.valueOf(mArticlesArray));
 
                 for (int i = 0; i < mArticlesArray.length(); i++) {
 

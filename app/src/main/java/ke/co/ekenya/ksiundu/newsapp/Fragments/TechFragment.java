@@ -9,6 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +31,9 @@ public class TechFragment extends Fragment {
     private RecyclerView mTechRecyclerList;
     private SweetAlertDialog mWorldNewsDialog;
     private ArrayList<WorldModel> mWorldList = new ArrayList<>();
+    private Spinner mTechSpinner;
+    private String mItem;
+    private int mCurrentState = 0;
     public TechFragment() {
         // Required empty public constructor
     }
@@ -59,9 +66,18 @@ public class TechFragment extends Fragment {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            String url = "https://newsapi.org/v2/everything?q=technology&apiKey=2000bed637964320887999f67adb1242";
+            String url = "";
+            if (mCurrentState == 0) {
+                url = "https://newsapi.org/v2/everything?q=technology&apiKey=390a63f3032e4dd9ac906401f6140e7e";
+            } else if (mCurrentState == 1) {
+                if (mItem.equals("ABC News")) {
+                    url = "https://newsapi.org/v2/everything?sources=abc-news&q=technology&apiKey=2000bed637964320887999f67adb1242";
+                } else if (mItem.equals("BBC News")){
+                    url = "https://newsapi.org/v2/everything?sources=bbc-news&q=technology&apiKey=2000bed637964320887999f67adb1242";
+                }
+            }
             ApiService mService = new ApiService();
-            String response = mService.getWorldNews(url);
+            String response = mService.getTechNews(url);
 
             try {
                 JSONObject mObject = new JSONObject(response);
