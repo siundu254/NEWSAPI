@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/headline_bg"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageViewTechNews"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="TechCrunch"
+                        android:textColor="#1d87e5"
+                        android:textStyle="bold"
+                        android:id="@+id/textViewSource"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSource"
+                        android:layout_alignStart="@+id/textViewSource"
+                        android:layout_alignLeft="@+id/textViewSource"
+                        android:layout_marginTop="10dp"
+                        android:text="The next frontier in real estate technology"
+                        android:textColor="#000"
+                        android:textSize="21sp"
+                        android:id="@+id/textViewTitle"/>
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textViewTitle"
+                        android:background="@drawable/tech_button"
+                        android:layout_margin="10dp"
+                        android:text="READ MORE"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/textReadMore"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="2019-04-04T06:17:11Z"
+        android:textSize="15sp"
+        android:textColor="#0076ff"
+        android:id="@+id/textHeadLinePublishedAt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textHeadLinePublishedAt"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/textHeadLinePublishedAt"
+        android:layout_alignLeft="@+id/textHeadLinePublishedAt"
+        android:text="Netanyahu: Baumel’s father traveled around the world to find his son"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="21sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:id="@+id/textHeadLineTitle"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textHeadLineTitle"
+        android:layout_alignEnd="@+id/textHeadLineTitle"
+        android:layout_alignLeft="@+id/textHeadLineTitle"
+        android:layout_alignStart="@+id/textHeadLineTitle"
+        android:layout_below="@+id/textHeadLineTitle"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:id="@+id/cardViewHeadLines">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/imageViewHeadLine"
+            android:src="@drawable/headline_bg"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name" />
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cardViewHeadLines"
+        android:background="#e3e3e3"/>
+
+</RelativeLayout>

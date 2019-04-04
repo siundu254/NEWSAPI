@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/headline_bg"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageViewWorldNews"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LifeHacker.com"
+                android:background="@drawable/tech_button"
+                android:padding="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/textViewWorldSource"
+                android:layout_above="@+id/textViewWorldTitle"
+                android:layout_alignStart="@+id/textViewWorldTitle"
+                android:layout_alignLeft="@+id/textViewWorldTitle"
+                android:layout_marginBottom="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do All These Things Before Traveling Internationally"
+                android:layout_alignBottom="@+id/imageViewWorldNews"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/textViewWorldTitle"/>
+
+        </RelativeLayout>
+        
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

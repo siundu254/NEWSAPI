@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.WorldFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewWorld"
+        android:layout_marginTop="10dp"
+        android:text="WORLD NEWS"
+        android:textSize="23sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerWorld"
+        android:layout_below="@+id/textViewWorld">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
